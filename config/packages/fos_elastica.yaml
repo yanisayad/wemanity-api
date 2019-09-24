@@ -1,0 +1,53 @@
+fos_elastica:
+    clients:
+        default: { host: 127.0.0.1, port: 9200 }
+    indexes:
+        app:
+            settings:
+                index:
+                    analysis:
+                        analyzer:
+                            name_analyzer:
+                                type: custom
+                                tokenizer: standard
+                                filter: [standard, lowercase, asciifolding, elision]
+            client: default
+            types:
+                city:
+                    properties:
+                        id:
+                            type: integer
+                        name:
+                            type: completion
+                        zipcode:
+                            type: integer
+                        department:
+                            type: integer
+                    persistence:
+                        # the driver can be orm, mongodb, phpcr or propel
+                        # listener and finder are not supported by
+                        # propel and should be removed
+                        driver: orm
+                        model: App\Entity\City
+                        provider: ~
+                        listener: ~
+                        finder: ~
+                cinema:
+                    properties:
+                        id:
+                            type: integer
+                        name:
+                            type: completion
+                        street:
+                            type: completion
+                        phone:
+                            type: integer
+                    persistence:
+                        # the driver can be orm, mongodb, phpcr or propel
+                        # listener and finder are not supported by
+                        # propel and should be removed
+                        driver: orm
+                        model: App\Entity\Cinema
+                        provider: ~
+                        listener: ~
+                        finder: ~
