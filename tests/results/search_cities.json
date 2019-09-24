@@ -1,0 +1,122 @@
+[
+    {
+        "id": 4,
+        "name": "TOSSIAT",
+        "zipcode": 1250,
+        "department": 1
+    },
+    {
+        "id": 9,
+        "name": "PERON",
+        "zipcode": 1630,
+        "department": 1
+    },
+    {
+        "id": 11,
+        "name": "CHAVEYRIAT",
+        "zipcode": 1660,
+        "department": 1
+    },
+    {
+        "id": 16,
+        "name": "SAINT-BERNARD",
+        "zipcode": 1600,
+        "department": 1
+    },
+    {
+        "id": 23,
+        "name": "HOTONNES",
+        "zipcode": 1260,
+        "department": 1
+    },
+    {
+        "id": 28,
+        "name": "CHARNOZ-SUR-AIN",
+        "zipcode": 1800,
+        "department": 1
+    },
+    {
+        "id": 30,
+        "name": "MARCHAMP",
+        "zipcode": 1680,
+        "department": 1
+    },
+    {
+        "id": 35,
+        "name": "TREFFORT-CUISIAT",
+        "zipcode": 1370,
+        "department": 1
+    },
+    {
+        "id": 42,
+        "name": "PONCIN",
+        "zipcode": 1450,
+        "department": 1
+    },
+    {
+        "id": 47,
+        "name": "VILLEREVERSURE",
+        "zipcode": 1250,
+        "department": 1
+    },
+    {
+        "id": 54,
+        "name": "VILLEBOIS",
+        "zipcode": 1150,
+        "department": 1
+    },
+    {
+        "id": 59,
+        "name": "CONDEISSIAT",
+        "zipcode": 1400,
+        "department": 1
+    },
+    {
+        "id": 61,
+        "name": "CHALAMONT",
+        "zipcode": 1320,
+        "department": 1
+    },
+    {
+        "id": 66,
+        "name": "SAINT-ANDRE-DE-CORCY",
+        "zipcode": 1390,
+        "department": 1
+    },
+    {
+        "id": 73,
+        "name": "MONTREVEL-EN-BRESSE",
+        "zipcode": 1340,
+        "department": 1
+    },
+    {
+        "id": 78,
+        "name": "CHALEINS",
+        "zipcode": 1480,
+        "department": 1
+    },
+    {
+        "id": 80,
+        "name": "THIL",
+        "zipcode": 1120,
+        "department": 1
+    },
+    {
+        "id": 85,
+        "name": "AMBUTRIX",
+        "zipcode": 1500,
+        "department": 1
+    },
+    {
+        "id": 92,
+        "name": "SAINT-MAURICE-DE-GOURDANS",
+        "zipcode": 1800,
+        "department": 1
+    },
+    {
+        "id": 97,
+        "name": "CORMOZ",
+        "zipcode": 1560,
+        "department": 1
+    }
+]

@@ -96,9 +96,18 @@ class Cinema
         return $this->city;
     }
 
+    public function setCity(City $city): self
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
     public function getMovies()
     {
-        return $this->movies;
+        return array_map(function ($movie) {
+            return $movie->toArray();
+        }, $this->movies->toArray());
     }
 
     /**
@@ -112,7 +121,7 @@ class Cinema
             "id"     => $this->getId(),
             "name"   => $this->getName(),
             "street" => $this->getStreet(),
-            "phone"  => $this->getPhone()
+            "phone"  => $this->getPhone(),
         ];
     }
 }

@@ -6,6 +6,7 @@ use App\Entity\Cinema;
 use App\Entity\City;
 use App\Repository\CinemaRepository;
 use App\Utils\SearchUtils;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -85,5 +86,36 @@ class CinemaController extends AbstractController
             "department" => $city->getDepartment(),
             "cinemas"    => $city->getCinemas()
         ], 200);
+    }
+
+    /**
+     * @Route("/city/{id}/cinema", methods={"POST"}, name="createCinema", requirements={"id": "\d+"})
+     * @ParamConverter("city", class="App:City")
+     *
+     * @param City $city
+     *
+     * @return JsonResponse
+     */
+    public function createCinema(Request $req, City $city, EntityManagerInterface $em)
+    {
+        $data   = json_decode($req->getContent(), true);
+        $name   = isset($data['name']) ? $data['name'] : null;
+        $street = isset($data['street']) ? $data['street'] : null;
+        $phone  = isset($data['phone']) ? $data['phone'] : null;
+
+        if (in_array(null, [$name, $street, $phone])) {
+            return $this->json("Un des champs est manquant");
+        }
+
+        $cinema = new Cinema();
+        $cinema->setName($name);
+        $cinema->setStreet($street);
+        $cinema->setPhone($phone);
+        $cinema->setCity($city);
+
+        $em->persist($cinema);
+        $em->flush();
+
+        return $this->json($cinema->toArray(), 201);
     }
 }

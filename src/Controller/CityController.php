@@ -14,9 +14,17 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 class CityController extends AbstractController
 {
     /**
+     * @Route("/", methods={"GET"}, name="home")
+     */
+    public function home()
+    {
+        return $this->json("home", 200);
+    }
+
+    /**
      * @Route("/search/city", methods={"GET"}, name="searchCity")
      */
-    public function searchCity(Request $req, SearchUtils $searchUtils): JsonResponse
+    public function searchCity(Request $req, SearchUtils $searchUtils)
     {
         $query = $req->query->get('q', '*');
         $size  = $req->query->get('size', 20);
