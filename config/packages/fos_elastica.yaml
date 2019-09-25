@@ -51,3 +51,22 @@ fos_elastica:
                         provider: ~
                         listener: ~
                         finder: ~
+                movie:
+                    properties:
+                        id:
+                            type: integer
+                        name:
+                            type: completion
+                        start:
+                            type: completion
+                        end:
+                            type: completion
+                    persistence:
+                        # the driver can be orm, mongodb, phpcr or propel
+                        # listener and finder are not supported by
+                        # propel and should be removed
+                        driver: orm
+                        model: App\Entity\Movie
+                        provider: ~
+                        listener: ~
+                        finder: ~

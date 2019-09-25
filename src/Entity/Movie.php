@@ -85,6 +85,13 @@ class Movie
         return $this->cinema;
     }
 
+    public function setCinema(Cinema $cinema)
+    {
+        $this->cinema = $cinema;
+
+        return $this;
+    }
+
     public function toArray()
     {
         return [

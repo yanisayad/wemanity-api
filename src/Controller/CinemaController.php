@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Cinema;
 use App\Entity\City;
 use App\Repository\CinemaRepository;
+use App\Repository\CityRepository;
 use App\Utils\SearchUtils;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -117,5 +118,53 @@ class CinemaController extends AbstractController
         $em->flush();
 
         return $this->json($cinema->toArray(), 201);
+    }
+
+    /**
+     * @Route("/cinema/{id}", methods={"PUT"}, name="updateCinema", requirements={"id": "\d+"})
+     * @ParamConverter("cinema", class="App:Cinema")
+     *
+     * @param Request $req
+     * @param Cinema $cinema
+     * @param EntityManagerInterface $em
+     *
+     * @return JsonResponse
+     */
+    public function updateCinema(Request $req, Cinema $cinema, EntityManagerInterface $em)
+    {
+        $data   = json_decode($req->getContent(), true);
+        $name   = isset($data['name']) ? $data['name'] : null;
+        $street = isset($data['street']) ? $data['street'] : null;
+        $phone  = isset($data['phone']) ? $data['phone'] : null;
+
+        if (in_array(null, [$name, $street, $phone])) {
+            return $this->json("Un des champs est manquant");
+        }
+
+        $cinema->setName($name);
+        $cinema->setStreet($street);
+        $cinema->setPhone($phone);
+
+        $em->persist($cinema);
+        $em->flush();
+
+        return $this->json($cinema->toArray(), 200);
+    }
+
+    /**
+     * @Route("/cinema/{id}", methods={"DELETE"}, name="removeCinema", requirements={"id": "\d+"})
+     * @ParamConverter("cinema", class="App:Cinema")
+     *
+     * @param Cinema $city
+     * @param EntityManagerInterface $em
+     *
+     * @return JsonResponse
+     */
+    public function removeCinema(Cinema $cinema, EntityManagerInterface $em)
+    {
+        $em->remove($cinema);
+        $em->flush();
+
+        return $this->json($cinema->toArray(), 200);
     }
 }

@@ -13,7 +13,7 @@ class SearchUtils {
 
     public function search($type, $query_string = '*', $from = 0, $size = 20)
     {
-        if (!in_array($type, ['city', 'cinema'])) {
+        if (!in_array($type, ['city', 'cinema', 'movie'])) {
             throw new Exception("Mauvais index fournis", 400);
         }
 
