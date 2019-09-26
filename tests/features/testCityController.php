@@ -26,7 +26,7 @@ class CityControllerTest extends WebTestCase
         $client->request('GET', '/search/city');
         $response = preg_replace('/HTTP(.*)index/s', "", $client->getResponse());
         $this->assertJsonStringEqualsJsonFile(
-            __DIR__ . '/../results/search_cities.json',
+            __DIR__ . '/../results/city/search_cities.json',
             $response
         );
 
@@ -39,7 +39,7 @@ class CityControllerTest extends WebTestCase
         $client->request('GET', '/city/1');
         $response = preg_replace('/HTTP(.*)index/s', "", $client->getResponse());
         $this->assertJsonStringEqualsJsonFile(
-            __DIR__ . '/../results/get_city_by_id.json',
+            __DIR__ . '/../results/city/get_city_by_id.json',
             $response
         );
 

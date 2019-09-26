@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "name": "OZAN",
+        "zipcode": 1190,
+        "department": 1
+
+    },
+    {
+        "id": 2,
+        "name": "CORMORANCHE-SUR-SAONE",
+        "zipcode": 1290,
+        "department": 1
+
+    },
+    {
+        "id": 3,
+        "name": "PLAGNE",
+        "zipcode": 1130,
+        "department": 1
+
+    },
+    {
+        "id": 4,
+        "name": "TOSSIAT",
+        "zipcode": 1250,
+        "department": 1
+
+    },
+    {
+        "id": 5,
+        "name": "POUILLAT",
+        "zipcode": 1250,
+        "department": 1
+
+    },
+    {
+        "id": 6,
+        "name": "TORCIEU",
+        "zipcode": 1230,
+        "department": 1
+
+    },
+    {
+        "id": 7,
+        "name": "REPLONGES",
+        "zipcode": 1620,
+        "department": 1
+
+    },
+    {
+        "id": 8,
+        "name": "CORCELLES",
+        "zipcode": 1110,
+        "department": 1
+
+    },
+    {
+        "id": 9,
+        "name": "PERON",
+        "zipcode": 1630,
+        "department": 1
+
+    },
+    {
+        "id": 10,
+        "name": "RELEVANT",
+        "zipcode": 1990,
+        "department": 1
+
+    }
+
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Pirates des caraïbes",
+        "start": {
+            "date": "2019-06-03 20:30:00.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/Paris"
+        },
+        "end": {
+            "date": "2019-06-03 22:30:00.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/Paris"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Les Chtis",
+        "start": {
+            "date": "2019-06-03 20:30:00.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/Paris"
+        },
+        "end": {
+            "date": "2019-06-03 22:30:00.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/Paris"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Les Bronzés",
+        "start": {
+            "date": "2019-06-03 20:30:00.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/Paris"
+        },
+        "end": {
+            "date": "2019-06-03 22:30:00.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/Paris"
+        }
+    },
+    {
+        "id": 4,
+        "name": "La mémoire dans la peau",
+        "start": {
+            "date": "2019-06-03 20:30:00.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/Paris"
+        },
+        "end": {
+            "date": "2019-06-03 22:30:00.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/Paris"
+        }
+    }
+]

@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "name": "UGC",
+        "street": "3 rue Cusino",
+        "phone": "0101010101"
+
+    },
+    {
+        "id": 2,
+        "name": "UGC",
+        "street": "5 rue Faubourg",
+        "phone": "0202020202"
+
+    },
+    {
+        "id": 3,
+        "name": "GAUMONT ",
+        "street": "86 avenue Saint Honoré",
+        "phone": "0303030303"
+
+    },
+    {
+        "id": 5,
+        "name": "MEGARAMA",
+        "street": "75 rue du Berger",
+        "phone": "0404040404"
+
+    }
+
+]
