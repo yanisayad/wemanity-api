@@ -24,12 +24,12 @@ class City
     private $name;
 
     /**
-     * @ORM\Column(type="integer", length=6)
+     * @ORM\Column(type="string", length=255)
      */
     private $zipcode;
 
     /**
-     * @ORM\Column(type="integer", length=3)
+     * @ORM\Column(type="string", length=255)
      */
     private $department;
 
@@ -53,12 +53,12 @@ class City
         return $this->name;
     }
 
-    public function getZipcode(): ?int
+    public function getZipcode(): ?string
     {
         return $this->zipcode;
     }
 
-    public function getDepartment(): ?int
+    public function getDepartment(): ?string
     {
         return $this->department;
     }

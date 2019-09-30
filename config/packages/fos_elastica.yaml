@@ -20,9 +20,9 @@ fos_elastica:
                         name:
                             type: completion
                         zipcode:
-                            type: integer
+                            type: completion
                         department:
-                            type: integer
+                            type: completion
                     persistence:
                         # the driver can be orm, mongodb, phpcr or propel
                         # listener and finder are not supported by
@@ -41,7 +41,7 @@ fos_elastica:
                         street:
                             type: completion
                         phone:
-                            type: integer
+                            type: completion
                     persistence:
                         # the driver can be orm, mongodb, phpcr or propel
                         # listener and finder are not supported by
@@ -88,9 +88,9 @@ fos_elastica:
                         name:
                             type: completion
                         zipcode:
-                            type: integer
+                            type: completion
                         department:
-                            type: integer
+                            type: completion
                     persistence:
                         # the driver can be orm, mongodb, phpcr or propel
                         # listener and finder are not supported by
@@ -109,7 +109,7 @@ fos_elastica:
                         street:
                             type: completion
                         phone:
-                            type: integer
+                            type: completion
                     persistence:
                         # the driver can be orm, mongodb, phpcr or propel
                         # listener and finder are not supported by

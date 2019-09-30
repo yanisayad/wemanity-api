@@ -2,71 +2,71 @@
     {
         "id": 1,
         "name": "OZAN",
-        "zipcode": 1190,
-        "department": 1
+        "zipcode": "01190",
+        "department": "01"
 
     },
     {
         "id": 2,
         "name": "CORMORANCHE-SUR-SAONE",
-        "zipcode": 1290,
-        "department": 1
+        "zipcode": "01290",
+        "department": "01"
 
     },
     {
         "id": 3,
         "name": "PLAGNE",
-        "zipcode": 1130,
-        "department": 1
+        "zipcode": "01130",
+        "department": "01"
 
     },
     {
         "id": 4,
         "name": "TOSSIAT",
-        "zipcode": 1250,
-        "department": 1
+        "zipcode": "01250",
+        "department": "01"
 
     },
     {
         "id": 5,
         "name": "POUILLAT",
-        "zipcode": 1250,
-        "department": 1
+        "zipcode": "01250",
+        "department": "01"
 
     },
     {
         "id": 6,
         "name": "TORCIEU",
-        "zipcode": 1230,
-        "department": 1
+        "zipcode": "01230",
+        "department": "01"
 
     },
     {
         "id": 7,
         "name": "REPLONGES",
-        "zipcode": 1620,
-        "department": 1
+        "zipcode": "01620",
+        "department": "01"
 
     },
     {
         "id": 8,
         "name": "CORCELLES",
-        "zipcode": 1110,
-        "department": 1
+        "zipcode": "01110",
+        "department": "01"
 
     },
     {
         "id": 9,
         "name": "PERON",
-        "zipcode": 1630,
-        "department": 1
+        "zipcode": "01630",
+        "department": "01"
 
     },
     {
         "id": 10,
         "name": "RELEVANT",
-        "zipcode": 1990,
-        "department": 1
+        "zipcode": "01990",
+        "department": "01"
 
     }
 
