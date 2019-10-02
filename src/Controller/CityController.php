@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Utils\SearchUtils;
 use App\Entity\City;
-
+use App\Repository\CityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,6 +19,18 @@ class CityController extends AbstractController
     public function home()
     {
         return $this->json("home", 200);
+    }
+
+    /**
+     * @Route("/cities", methods={"GET"}, name="getAllCities")
+     */
+    public function getAllCities(CityRepository $cityRepository): JsonResponse
+    {
+        $cities = array_map(function ($city) {
+            return $city->toArray();
+        }, $cityRepository->findAll());
+
+        return $this->json($cities, 200);
     }
 
     /**

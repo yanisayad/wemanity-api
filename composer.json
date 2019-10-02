@@ -57,6 +57,20 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "index": [
+            "bin/console fos:elastica:populate --index=app --env=dev",
+            "bin/console fos:elastica:populate --index=test.app --env=test"
+        ],
+        "test-es" : [
+            "bin/console fos:elastica:populate --index=app --env=dev",
+            "bin/console fos:elastica:populate --index=test.app --env=test",
+            "bin/phpunit"
+        ],
+        "test": [
+            "bin/phpunit tests/features/testCityController.php",
+            "bin/phpunit tests/features/testCinemaController.php",
+            "bin/phpunit tests/features/testMovieController.php"
         ]
     },
     "conflict": {

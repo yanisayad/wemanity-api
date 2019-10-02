@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Tests\City;
+namespace App\Tests\Search;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class CityControllerTest extends WebTestCase
+class SearchControllerTest extends WebTestCase
 {
     protected $client;
 
@@ -13,41 +13,39 @@ class CityControllerTest extends WebTestCase
         $this->client = static::createClient();
     }
 
-    public function testHome()
+    public function testSearchCinema()
     {
         $this->client = static::createClient();
-        $this->client->request('GET', '/');
+        $this->client->request('GET', '/search/cinema');
         $response = preg_replace('/HTTP(.*)index/s', "", $this->client->getResponse());
-
-        $this->assertJsonStringEqualsJsonString(
-            json_encode("home"),
+        $this->assertJsonStringEqualsJsonFile(
+            __DIR__ . '/../results/cinema/search_cinemas.json',
             $response
         );
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
     }
 
-    public function testGetAllCities()
+    public function testSearchCity()
     {
         $this->client = static::createClient();
-        $this->client->request('GET', '/cities');
-
+        $this->client->request('GET', '/search/city');
         $response = preg_replace('/HTTP(.*)index/s', "", $this->client->getResponse());
         $this->assertJsonStringEqualsJsonFile(
-            __DIR__ . '/../results/city/get_all_cities.json',
+            __DIR__ . '/../results/city/search_cities.json',
             $response
         );
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
     }
 
-    public function testGetCityById()
+    public function testSearchMovies()
     {
         $this->client = static::createClient();
-        $this->client->request('GET', '/city/1');
+        $this->client->request('GET', '/search/movie');
         $response = preg_replace('/HTTP(.*)index/s', "", $this->client->getResponse());
         $this->assertJsonStringEqualsJsonFile(
-            __DIR__ . '/../results/city/get_city_by_id.json',
+            __DIR__ . '/../results/movie/search_movies.json',
             $response
         );
 

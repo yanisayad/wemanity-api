@@ -6,50 +6,37 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class CinemaControllerTest extends WebTestCase
 {
+    protected $em;
+    protected $client;
 
-    public function testSearchCinema()
+    public function setUp()
     {
-        $client = static::createClient();
-        $client->request('GET', '/search/cinema');
-        $response = preg_replace('/HTTP(.*)index/s', "", $client->getResponse());
-        $this->assertJsonStringEqualsJsonFile(
-            __DIR__ . '/../results/cinema/search_cinemas.json',
-            $response
-        );
-
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    public function testGetAllCinemas()
-    {
-        $client = static::createClient();
-        $client->request('GET', '/cinemas');
-
-        $response = preg_replace('/HTTP(.*)index/s', "", $client->getResponse());
-        $this->assertJsonStringEqualsJsonFile(
-            __DIR__ . '/../results/cinema/get_all_cinema.json',
-            $response
-        );
-
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->client = static::createClient();
     }
 
     public function testGetCinemaById()
     {
-        $client = static::createClient();
-        $client->request('GET', '/cinema/1');
+        $this->client->request('GET', '/cinema/1');
 
-        $response = preg_replace('/HTTP(.*)index/s', "", $client->getResponse());
+        $response = preg_replace('/HTTP(.*)index/s', "", $this->client->getResponse());
         $this->assertJsonStringEqualsJsonFile(
             __DIR__ . '/../results/cinema/get_cinema_by_id.json',
             $response
         );
 
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
     }
 
-    // public function testCreateUpdateDelete()
-    // {
+    public function testGetAllCinemas()
+    {
+        $this->client->request('GET', '/cinemas');
 
-    // }
+        $response = preg_replace('/HTTP(.*)index/s', "", $this->client->getResponse());
+        $this->assertJsonStringEqualsJsonFile(
+            __DIR__ . '/../results/cinema/get_all_cinema.json',
+            $response
+        );
+
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+    }
 }

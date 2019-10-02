@@ -41,19 +41,8 @@ class SearchUtils {
         $query['sort']  = [
             'id' => [
                 'order' => 'asc',
-            ],
+            ]
         ];
-
-        // if ('' !== trim($sort) && 1 === preg_match("#^([+-]?)sort:([^\s]+)$#", $sort, $match)) {
-        //     $order = '-' === $match[1] ? 'desc' : 'asc';
-        //     $sort  = [
-        //         $match[2] => [
-        //             'order' => $order,
-        //         ],
-        //     ];
-
-        //     $query['sort'] = $sort;
-        // }
 
         $path = $index->getName() . '/' . $type->getName() . '/_search';
 
