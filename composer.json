@@ -1,4 +1,11 @@
 {
+    "name": "wemanity-api",
+    "description": "Test technique Wemanity",
+    "authors": [{
+        "name": "Yanis AYAD",
+        "email": "ayadyanis.ay@gmail.com",
+        "role": "Developer"
+    }],
     "type": "project",
     "license": "proprietary",
     "require": {
