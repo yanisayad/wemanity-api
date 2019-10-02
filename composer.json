@@ -65,6 +65,9 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
+        "create-index": [
+            "bin/console fos:elastica:create"
+        ],
         "index": [
             "bin/console fos:elastica:populate --index=app --env=dev",
             "bin/console fos:elastica:populate --index=test.app --env=test"

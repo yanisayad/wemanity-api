@@ -19,37 +19,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
-# Affichage de la table cinema
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `cinema`;
-
-CREATE TABLE `cinema` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `street` varchar(45) DEFAULT NULL,
-  `name` varchar(45) DEFAULT NULL,
-  `phone` varchar(45) DEFAULT NULL,
-  `city_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_cinema_city_idx` (`city_id`),
-  CONSTRAINT `cinema_ibfk_1` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-LOCK TABLES `cinema` WRITE;
-/*!40000 ALTER TABLE `cinema` DISABLE KEYS */;
-
-INSERT INTO `cinema` (`id`, `street`, `name`, `phone`, `city_id`)
-VALUES
-	(1,'3 rue Cusino','UGC','0101010101',1),
-	(2,'5 rue Faubourg','UGC','0202020202',1),
-	(3,'86 avenue Saint Honoré','GAUMONT ','0303030303',2),
-	(4,'75 rue du Berger','MEGARAMA','0404040404',3);
-
-/*!40000 ALTER TABLE `cinema` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
 # Affichage de la table city
 # ------------------------------------------------------------
 
@@ -82,6 +51,35 @@ VALUES
 /*!40000 ALTER TABLE `city` ENABLE KEYS */;
 UNLOCK TABLES;
 
+
+# Affichage de la table cinema
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `cinema`;
+
+CREATE TABLE `cinema` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `street` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `city_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_cinema_city_idx` (`city_id`),
+  CONSTRAINT `cinema_ibfk_1` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+LOCK TABLES `cinema` WRITE;
+/*!40000 ALTER TABLE `cinema` DISABLE KEYS */;
+
+INSERT INTO `cinema` (`id`, `street`, `name`, `phone`, `city_id`)
+VALUES
+	(1,'3 rue Cusino','UGC','0101010101',1),
+	(2,'5 rue Faubourg','UGC','0202020202',1),
+	(3,'86 avenue Saint Honoré','GAUMONT ','0303030303',2),
+	(4,'75 rue du Berger','MEGARAMA','0404040404',3);
+
+/*!40000 ALTER TABLE `cinema` ENABLE KEYS */;
+UNLOCK TABLES;
 
 # Affichage de la table movie
 # ------------------------------------------------------------
