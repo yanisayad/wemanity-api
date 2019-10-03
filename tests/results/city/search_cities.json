@@ -4,70 +4,60 @@
         "name": "OZAN",
         "zipcode": "01190",
         "department": "01"
-
     },
     {
         "id": 2,
         "name": "CORMORANCHE-SUR-SAONE",
         "zipcode": "01290",
         "department": "01"
-
     },
     {
         "id": 3,
         "name": "PLAGNE",
         "zipcode": "01130",
         "department": "01"
-
     },
     {
         "id": 4,
         "name": "TOSSIAT",
         "zipcode": "01250",
         "department": "01"
-
     },
     {
         "id": 5,
         "name": "POUILLAT",
         "zipcode": "01250",
         "department": "01"
-
     },
     {
         "id": 6,
         "name": "TORCIEU",
         "zipcode": "01230",
         "department": "01"
-
     },
     {
         "id": 7,
         "name": "REPLONGES",
         "zipcode": "01620",
         "department": "01"
-
     },
     {
         "id": 8,
         "name": "CORCELLES",
         "zipcode": "01110",
         "department": "01"
-
     },
     {
         "id": 9,
         "name": "PERON",
         "zipcode": "01630",
         "department": "01"
-
     },
     {
         "id": 10,
         "name": "RELEVANT",
         "zipcode": "01990",
         "department": "01"
-
     }
 
 ]

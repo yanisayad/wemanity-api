@@ -101,13 +101,20 @@ class MovieController extends AbstractController
         $end   = isset($data['end']) ? $data['end'] : null;
 
         if (in_array(null, [$name, $start, $end])) {
-            return $this->json("Un des champs est manquant");
+            return $this->json("Un des champs est manquant", 400);
+        }
+
+        $start = new DateTime($start);
+        $end   = new DateTime($end);
+
+        if ($start >= $end) {
+            return $this->json("La date de fin de ultèrieur à la date de début", 400);
         }
 
         $movie = new Movie();
         $movie->setName($name);
-        $movie->setStart(new DateTime($start));
-        $movie->setEnd(new DateTime($end));
+        $movie->setStart($start);
+        $movie->setEnd($end);
         $movie->setCinema($cinema);
 
         $em->persist($movie);
@@ -137,9 +144,16 @@ class MovieController extends AbstractController
             return $this->json("Un des champs est manquant");
         }
 
+        $start = new DateTime($start);
+        $end   = new DateTime($end);
+
+        if ($start >= $end) {
+            return $this->json("La date de fin de ultèrieur à la date de début", 400);
+        }
+
         $movie->setName($name);
-        $movie->setStart(new DateTime($start));
-        $movie->setEnd(new DateTime($end));
+        $movie->setStart($start);
+        $movie->setEnd($end);
 
         $em->persist($movie);
         $em->flush();

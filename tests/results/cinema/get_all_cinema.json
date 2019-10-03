@@ -4,7 +4,6 @@
         "name": "UGC",
         "street": "3 rue Cusino",
         "phone": "0101010101"
-
     },
     {
         "id": 2,
@@ -21,11 +20,9 @@
 
     },
     {
-        "id": 5,
+        "id": 4,
         "name": "MEGARAMA",
         "street": "75 rue du Berger",
         "phone": "0404040404"
-
     }
-
 ]
