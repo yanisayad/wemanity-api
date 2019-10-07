@@ -3,9 +3,9 @@ Wemanity Project
 
 ## Prérequis
 
-- PHP version 7.1
+- PHP (v.7.1)
 - MYSQL
-- ElasticSearch
+- ElasticSearch (v.1.7)
 
 ## Installation
 
