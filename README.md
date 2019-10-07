@@ -61,7 +61,7 @@ php -S localhost:7979 public/index.php
 composer test
 ```
 
-- Lancement des tests
+- Lancement des tests avec Elasticsearch
 ```
 composer test-es
 ```
