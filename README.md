@@ -5,7 +5,7 @@ Wemanity Project
 
 - PHP (v.7.1)
 - MYSQL
-- ElasticSearch (v.1.7)
+- ElasticSearch (v.1.7) -> `localhost:9200`
 
 ## Installation
 
